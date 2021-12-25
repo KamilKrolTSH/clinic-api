@@ -14,7 +14,7 @@ namespace ClinicApi.Models
         public float BloodPressure { get; set; }
 
         [Required]
-        public float BiabetesPedigreeFunction { get; set; }
+        public float DiabetesPedigreeFunction { get; set; }
 
         [Required]
         public float Insulin { get; set; }

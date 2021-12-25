@@ -84,6 +84,63 @@ namespace ClinicApi.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("ClinicApi.Models.UserData", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<float>("Age")
+                        .HasColumnType("real");
+
+                    b.Property<float>("BloodPressure")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Bmi")
+                        .HasColumnType("real");
+
+                    b.Property<float>("DiabetesPedigreeFunction")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Glucose")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Insulin")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Pregnancies")
+                        .HasColumnType("real");
+
+                    b.Property<float>("SkinThickness")
+                        .HasColumnType("real");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserDatas");
+                });
+
+            modelBuilder.Entity("ClinicApi.Models.UserDiagnose", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Value")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserDiagnoses");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")

@@ -26,8 +26,6 @@ namespace ClinicApi.Controllers
         {
             string userName = HttpContext.User.Identity.Name;
 
-            var films = await _context.UserDatas.FindAsync();
-
             var userData = await _context.UserDatas.Where((b) => b.UserName == userName).FirstOrDefaultAsync();
 
             if(userData == null){
@@ -36,12 +34,20 @@ namespace ClinicApi.Controllers
 
             return StatusCode(StatusCodes.Status200OK, new Response { Content = userData });
         }
+
+                
+        [HttpGet("list")]
+        public async Task<ActionResult<IEnumerable<UserData>>> GetUserDatas()
+        {
+
+            var userData = await _context.UserDatas.ToListAsync();
+
+            return StatusCode(StatusCodes.Status200OK, new Response { Content = userData });
+        }
         
         [HttpGet("{userName}")]
         public async Task<ActionResult<UserData>> GetUserDataByUserName(string userName)
         {
-            var films = await _context.UserDatas.FindAsync();
-
             var userData = await _context.UserDatas.Where((b) => b.UserName == userName).FirstOrDefaultAsync();
 
             if(userData == null){
@@ -63,10 +69,11 @@ namespace ClinicApi.Controllers
             userData.Pregnancies = userDataDto.Pregnancies;
             userData.Glucose = userDataDto.Glucose;
             userData.BloodPressure = userDataDto.BloodPressure;
-            userData.BiabetesPedigreeFunction = userDataDto.BiabetesPedigreeFunction;
+            userData.DiabetesPedigreeFunction = userDataDto.DiabetesPedigreeFunction;
             userData.Insulin = userDataDto.Insulin;
             userData.Bmi = userDataDto.Bmi;
             userData.Age = userDataDto.Age;
+            userData.SkinThickness = userDataDto.SkinThickness;
 
             _context.UserDatas.Update(userData);
             await _context.SaveChangesAsync();

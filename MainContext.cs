@@ -11,6 +11,8 @@ namespace ClinicApi.Models
         }
 
         public DbSet<UserData> UserDatas {get; set;}
+        
+        public DbSet<UserDiagnose> UserDiagnoses {get; set;}
 
     }
 }

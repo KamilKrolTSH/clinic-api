@@ -47,6 +47,41 @@ namespace ClinicApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "UserDatas",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Pregnancies = table.Column<float>(type: "real", nullable: false),
+                    Glucose = table.Column<float>(type: "real", nullable: false),
+                    BloodPressure = table.Column<float>(type: "real", nullable: false),
+                    DiabetesPedigreeFunction = table.Column<float>(type: "real", nullable: false),
+                    Insulin = table.Column<float>(type: "real", nullable: false),
+                    Bmi = table.Column<float>(type: "real", nullable: false),
+                    Age = table.Column<float>(type: "real", nullable: false),
+                    SkinThickness = table.Column<float>(type: "real", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserDatas", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserDiagnoses",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Value = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserDiagnoses", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -208,6 +243,12 @@ namespace ClinicApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "UserDatas");
+
+            migrationBuilder.DropTable(
+                name: "UserDiagnoses");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
