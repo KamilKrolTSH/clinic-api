@@ -34,18 +34,19 @@ namespace ClinicApi.Controllers
 
             return StatusCode(StatusCodes.Status200OK, new Response { Content = userDiagnose });
         }
+
         
-        // [HttpGet("{userName}")]
-        // public async Task<ActionResult<UserData>> GetUserDataByUserName(string userName)
-        // {
-        //     var userData = await _context.UserDatas.Where((b) => b.UserName == userName).FirstOrDefaultAsync();
+        [HttpGet("{userName}")]
+        public async Task<ActionResult<UserData>> GetUserDataByUserName(string userName)
+        {
+            var userDiagnose = await _context.UserDiagnoses.Where((b) => b.UserName == userName).FirstOrDefaultAsync();
 
-        //     if(userData == null){
-        //         return NotFound();
-        //     }
+            if(userDiagnose == null){
+                return NotFound();
+            }
 
-        //     return StatusCode(StatusCodes.Status200OK, new Response { Content = userData });
-        // }
+            return StatusCode(StatusCodes.Status200OK, new Response { Content = userDiagnose });
+        }
 
         // [HttpPost]
         // public async Task<ActionResult> setUserData(UserDataDto userDataDto)
