@@ -9,28 +9,27 @@
             public string UserName {get; set;}
 
             [Required]
-            public float Pregnancies { get; set; }
+            public int Pregnancies { get; set; }
             
             [Required]
-            public float Glucose { get; set; }
+            public int Glucose { get; set; }
 
             [Required]
-            public float BloodPressure { get; set; }
+            public int BloodPressure { get; set; }
 
             [Required]
             public float DiabetesPedigreeFunction { get; set; }
 
             [Required]
-            public float Insulin { get; set; }
+            public int Insulin { get; set; }
 
             [Required]
             public float Bmi { get; set; }
 
             [Required]
-            public float Age { get; set; }
-            
+            public int Age { get; set; }
 
             [Required]
-            public float SkinThickness { get; set; }
+            public int SkinThickness { get; set; }
         }
     }

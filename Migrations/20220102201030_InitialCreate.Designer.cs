@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClinicApi.Migrations
 {
     [DbContext(typeof(MainContext))]
-    [Migration("20211225181640_InitialCreate")]
+    [Migration("20220102201030_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -93,11 +93,11 @@ namespace ClinicApi.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<float>("Age")
-                        .HasColumnType("real");
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
 
-                    b.Property<float>("BloodPressure")
-                        .HasColumnType("real");
+                    b.Property<int>("BloodPressure")
+                        .HasColumnType("int");
 
                     b.Property<float>("Bmi")
                         .HasColumnType("real");
@@ -105,17 +105,17 @@ namespace ClinicApi.Migrations
                     b.Property<float>("DiabetesPedigreeFunction")
                         .HasColumnType("real");
 
-                    b.Property<float>("Glucose")
-                        .HasColumnType("real");
+                    b.Property<int>("Glucose")
+                        .HasColumnType("int");
 
-                    b.Property<float>("Insulin")
-                        .HasColumnType("real");
+                    b.Property<int>("Insulin")
+                        .HasColumnType("int");
 
-                    b.Property<float>("Pregnancies")
-                        .HasColumnType("real");
+                    b.Property<int>("Pregnancies")
+                        .HasColumnType("int");
 
-                    b.Property<float>("SkinThickness")
-                        .HasColumnType("real");
+                    b.Property<int>("SkinThickness")
+                        .HasColumnType("int");
 
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");

@@ -53,14 +53,14 @@ namespace ClinicApi.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Pregnancies = table.Column<float>(type: "real", nullable: false),
-                    Glucose = table.Column<float>(type: "real", nullable: false),
-                    BloodPressure = table.Column<float>(type: "real", nullable: false),
+                    Pregnancies = table.Column<int>(type: "int", nullable: false),
+                    Glucose = table.Column<int>(type: "int", nullable: false),
+                    BloodPressure = table.Column<int>(type: "int", nullable: false),
                     DiabetesPedigreeFunction = table.Column<float>(type: "real", nullable: false),
-                    Insulin = table.Column<float>(type: "real", nullable: false),
+                    Insulin = table.Column<int>(type: "int", nullable: false),
                     Bmi = table.Column<float>(type: "real", nullable: false),
-                    Age = table.Column<float>(type: "real", nullable: false),
-                    SkinThickness = table.Column<float>(type: "real", nullable: false)
+                    Age = table.Column<int>(type: "int", nullable: false),
+                    SkinThickness = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
