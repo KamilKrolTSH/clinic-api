@@ -21,6 +21,22 @@ namespace ClinicApi.Controllers
             _context = context;
         }
 
+        public static float GetScore(int x1, int x2, int x3, int x4, int x5, int x6, float x7, float x8)
+        {
+            float distance =
+                x1 * x1 +
+                x2 * x2 +
+                x3 * x3 +
+                x4 * x4 +
+                x5 * x5 +
+                x6 * x6 +
+                x7 * x7 +
+                x8 * x8;
+
+            float score = MathF.Sqrt(distance);
+            return score;
+        }
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDiagnose>>> GetUserData()
         {
@@ -78,17 +94,7 @@ namespace ClinicApi.Controllers
                 float x7 = d.Bmi - userData.Bmi;
                 float x8 = d.DiabetesPedigreeFunction - userData.DiabetesPedigreeFunction;
 
-                float distance =
-                x1 * x1 +
-                x2 * x2 +
-                x3 * x3 +
-                x4 * x4 + 
-                x5 * x5 + 
-                x6 * x6 + 
-                x7 * x7 +
-                x8 * x8;
-
-                d.Score = MathF.Sqrt(distance);
+                d.Score = GetScore(x1,x2,x3,x4,x5,x6,x7,x8);
             }
 
             diabetesL.Sort((x1, x2) => x1.Score.CompareTo(x2.Score));
