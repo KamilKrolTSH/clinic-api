@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+1PUjRZULJIU6HjgC20iH2riv2FeOZHRvN/NhBQv/X264DdrrPET/EZptGdHgNKu2vYSlHxVrlZlybkc1WsX7g==",
+  "dgSpecHash": "62sDb8awaKPjP1C1xdIih32znKX3xV50lg2xvAieLxZxobSTXDwo/5Ry3Y0Ck4wssqhwI8D2DtPBwhs8cF4Mfg==",
   "success": true,
-  "projectFilePath": "/Users/kamilkrol/Desktop/test/ClinicApi/ClinicApi.csproj",
+  "projectFilePath": "/Users/kamilkrol/Desktop/ClinicApi/ClinicApi/ClinicApi.csproj",
   "expectedPackageFiles": [
     "/Users/kamilkrol/.nuget/packages/castle.core/4.4.1/castle.core.4.4.1.nupkg.sha512",
     "/Users/kamilkrol/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",

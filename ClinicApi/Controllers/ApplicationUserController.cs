@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ClinicApi.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
 
 namespace ClinicApi.Controllers
 {
@@ -15,16 +17,29 @@ namespace ClinicApi.Controllers
     {
         private readonly MainContext _context;
 
-        public ApplicationUserController(MainContext context)
-        {
+        private readonly UserManager<ApplicationUser> userManager;
 
+        public ApplicationUserController(MainContext context, UserManager<ApplicationUser> userManager)
+        {
             _context = context;
+            this.userManager = userManager;
         }
     
         
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ApplicationUserDto>>> GetUsers() {
-            var users = await _context.Users.ToListAsync();
+            List<ApplicationUser> users = new List<ApplicationUser>();
+            
+            var allUsers = await _context.Users.ToListAsync();
+
+            foreach (var user in allUsers)
+            {
+                var userRoles = await userManager.GetRolesAsync(user);
+                if(userRoles.Contains("Admin") == false){
+                    users.Add(user);
+                }
+            }            
+
             return StatusCode(StatusCodes.Status200OK, new Response { Content = users });
         }
     }

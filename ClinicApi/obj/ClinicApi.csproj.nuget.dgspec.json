@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kamilkrol/Desktop/test/ClinicApi/ClinicApi.csproj": {}
+    "/Users/kamilkrol/Desktop/ClinicApi/ClinicApi/ClinicApi.csproj": {}
   },
   "projects": {
-    "/Users/kamilkrol/Desktop/test/ClinicApi/ClinicApi.csproj": {
+    "/Users/kamilkrol/Desktop/ClinicApi/ClinicApi/ClinicApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kamilkrol/Desktop/test/ClinicApi/ClinicApi.csproj",
+        "projectUniqueName": "/Users/kamilkrol/Desktop/ClinicApi/ClinicApi/ClinicApi.csproj",
         "projectName": "ClinicApi",
-        "projectPath": "/Users/kamilkrol/Desktop/test/ClinicApi/ClinicApi.csproj",
+        "projectPath": "/Users/kamilkrol/Desktop/ClinicApi/ClinicApi/ClinicApi.csproj",
         "packagesPath": "/Users/kamilkrol/.nuget/packages/",
-        "outputPath": "/Users/kamilkrol/Desktop/test/ClinicApi/obj/",
+        "outputPath": "/Users/kamilkrol/Desktop/ClinicApi/ClinicApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kamilkrol/.nuget/NuGet/NuGet.Config"
