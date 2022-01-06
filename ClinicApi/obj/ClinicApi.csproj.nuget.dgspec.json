@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Michał\\Studia\\Mgr_Sem_II\\Analiza_i_modelowanie_systemow_informatycznych\\Projekty\\Projekt_2\\clinic_najlepszy\\clinic-api\\ClinicApi.csproj": {}
+    "/Users/kamilkrol/Desktop/test/ClinicApi/ClinicApi.csproj": {}
   },
   "projects": {
-    "D:\\Michał\\Studia\\Mgr_Sem_II\\Analiza_i_modelowanie_systemow_informatycznych\\Projekty\\Projekt_2\\clinic_najlepszy\\clinic-api\\ClinicApi.csproj": {
+    "/Users/kamilkrol/Desktop/test/ClinicApi/ClinicApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Michał\\Studia\\Mgr_Sem_II\\Analiza_i_modelowanie_systemow_informatycznych\\Projekty\\Projekt_2\\clinic_najlepszy\\clinic-api\\ClinicApi.csproj",
+        "projectUniqueName": "/Users/kamilkrol/Desktop/test/ClinicApi/ClinicApi.csproj",
         "projectName": "ClinicApi",
-        "projectPath": "D:\\Michał\\Studia\\Mgr_Sem_II\\Analiza_i_modelowanie_systemow_informatycznych\\Projekty\\Projekt_2\\clinic_najlepszy\\clinic-api\\ClinicApi.csproj",
-        "packagesPath": "C:\\Users\\DiM\\.nuget\\packages\\",
-        "outputPath": "D:\\Michał\\Studia\\Mgr_Sem_II\\Analiza_i_modelowanie_systemow_informatycznych\\Projekty\\Projekt_2\\clinic_najlepszy\\clinic-api\\obj\\",
+        "projectPath": "/Users/kamilkrol/Desktop/test/ClinicApi/ClinicApi.csproj",
+        "packagesPath": "/Users/kamilkrol/.nuget/packages/",
+        "outputPath": "/Users/kamilkrol/Desktop/test/ClinicApi/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DiM\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kamilkrol/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -119,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
         }
       }
     }
